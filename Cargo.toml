@@ -1,0 +1,20 @@
+[package]
+name = "integral"
+version = "0.1.0"
+authors = ["inkyu <gofiri@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tokio = { version = "0.2.21", features = ["io-util", "rt-core", "rt-util", "stream", "tcp"] }
+bson = "0.14"
+failure = "0.1"
+
+[dependencies.mongodb]
+version = "0.10"
+default-features = false
+features = ["tokio-runtime"]
+
+[dependencies.redis]
+version = "0.16"
+default-features = false
+features = ["geospatial", "tokio-comp", "script"]
